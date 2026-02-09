@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head> 
+  <link rel="stylesheet" href="style.css"> 
+  <title>Add Student</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+</head>
+<body class="container mt-5 fade-in">
+  <h2>Add New Student</h2>
+  
+  <!-- Loading Indicator -->
+  <div id="loading" class="text-center mb-3" style="display: none;">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <p class="mt-2">Processing...</p>
+  </div>
+  
+  <form onsubmit="addStudent(event)">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" id="name" placeholder="Enter student name" class="form-control" required>
+    </div>
+    
+    <div class="mb-3">
+      <label for="course" class="form-label">Course</label>
+      <input type="text" id="course" placeholder="Enter course name" class="form-control" required>
+    </div>
+    
+    <div class="mb-3">
+      <label for="age" class="form-label">Age</label>
+      <input type="number" id="age" placeholder="Enter age" class="form-control" min="1" max="150" required>
+    </div>
+    
+    <div class="d-grid gap-2 d-md-flex">
+      <button type="submit" class="btn btn-success me-md-2">Add Student</button>
+      <button type="button" class="btn btn-secondary" onclick="window.location='index.html'">Cancel</button>
+    </div>
+  </form>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
